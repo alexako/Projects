@@ -1,14 +1,17 @@
-"""
+"""\
 Factorial Finder - The Factorial of a positive integer, n,
 is defined as the product of the sequence n, n-1, n-2, ...1
 and the factorial of zero, 0, is defined as being 1. Solve
 this using both loops and recursion.
 """
 
+#!/bin/python
+
+
 def fact_loop(n):
-    """
-    Returns the factorial of a given positive, non-zero integer
-    using loops.
+    """\
+        Returns the factorial of a given positive, non-zero integer
+        using loops.
     """
     fact = 1
     while n > 0:
@@ -16,12 +19,16 @@ def fact_loop(n):
         n -= 1
     return fact
 
+
 def fact_recursion(n):
+    """\
+        Returns the factorial of a given positive, non-zero integer
+        using recursion.
     """
-    Returns the factorial of a given positive, non-zero integer
-    using recursion.
-    """
-    return 1 if n == 0 else n * fact_recursion(n - 1) # if user as ternary operator
+
+    # if user as ternary operator
+    return 1 if n == 0 else n * fact_recursion(n - 1)
+
 
 if __name__ == '__main__':
     n = input('Enter a positive number: ')
